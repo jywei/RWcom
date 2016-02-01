@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root 'groups#index'  #Put localhost:3000/groups as the front page
+  resources :groups do
+    resources :posts
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
