@@ -1,9 +1,9 @@
 <h1 class="text-center">Add a new article</h1>
 
-<div class="col-md-4 col-md-offset-4">
+<div class="col-md-10 col-md-offset-1">
   <%= simple_form_for [@group,@post] do |f| %>
     <div class="form-group">
-      <%= f.input :content, input_html: { class: "form-control"} %>
+      <%= f.input :content, input_html: { class: "form-control", rows: "8" } %>
     </div>
     <div class="form-actions">
       <%= f.submit "Submit", disable_with: "Submiting...", class: "btn btn-primary"%>

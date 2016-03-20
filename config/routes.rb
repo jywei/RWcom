@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'groups#index'  #Put localhost:3000/groups as the front page
   resources :groups do
     resources :posts
