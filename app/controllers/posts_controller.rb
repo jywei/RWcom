@@ -16,6 +16,7 @@ class PostsController < ApplicationController
     @post.author = current_user
 
     if @post.save
+      current_user.join!(@group)
       redirect_to group_path(@group), notice: "Article is created!"
     else
       render :new
