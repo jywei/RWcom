@@ -2,11 +2,6 @@
   <h1>Modify It!</h1>
 
   <hr>
-  <%= simple_form_for @group do |f| %>
-    <div class="form-froup">
-      <%= f.input :title %>
-      <%= f.input :description %>
-    </div>
-    <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
-  <% end %>
+  <%= render "form", group: @group %>
+
 </div>
